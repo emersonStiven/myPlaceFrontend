@@ -1,0 +1,462 @@
+
+
+:root {
+  /* FONTS */
+  --FF: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+  --FW: 400;
+  --FC: #000;
+
+  /* COLORS */
+  --BODY-BGCOLOR: #fff;
+  --BGCOLOR: orange;
+
+  /* STANDARD PADDING */
+
+  /* STANDARD MARGIN */
+
+  /*BORDERS */
+
+
+  color-scheme: light dark;
+  color: black;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  /* VARIABLES */
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::after,
+*::before{
+  margin:0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: var(--FS);
+  font-family: var(--FF);
+  font-weight: var(--FW);
+  background-color: var(--BGCOLOR);
+}
+
+ body {
+  padding: 0;
+  /* min-width: 500px; */
+  min-height: 100vh;
+  /* max-width: calc(100% - 5%); */
+  
+  line-height: 1.5;
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--FC);
+}
+
+input, button, textarea{
+  /* these elements don't inherit font properties*/
+  font:inherit;
+  color:inherit;
+
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+ul, ol{
+  list-style: none;
+}
+
+img{
+   /* gets rid of the space below because they are inline elements, this will make the image responsive  */
+  display: block;
+  /* max-width: 100%; */
+  width: 100%;
+  height: 100%;
+  /* height: auto; */
+} 
+
+
+.app_wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - 10%);
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.top-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.showcase{
+  grid-column: 1 / 3;
+  grid-row-start: 1;
+
+}
+.searchLocation{
+  grid-column: 3/ 9;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 4rem;
+  border: solid 2px grey;
+}
+
+
+.filter-location{
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  position:absolute;
+  max-height: 50vh;
+  min-width: 20vw;
+  overflow-y: scroll;
+  background-color:white;
+  z-index: 1;
+  
+}
+.popular-destinies{
+  font-size: 1em;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  justify-content: center;
+}
+
+.icon-filter{
+  background: url("/src/assets/home.svg");
+  background-size: 100% 100%;
+  padding: 10px 10px 10px 30px;
+  margin-left: 2rem;
+  
+}
+/* @keyframes hoverListLocation {
+  0%{
+    background-color: transparent;
+  }
+  100%{
+    background-color: rgb(207, 243, 240);
+  }
+} */
+.location-item{
+  display: flex;
+  height: 10%;
+  align-items: center;
+  margin-left: 1rem;
+  border-bottom: thin 5px lightslategray;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+.location-item:hover{
+  background-color: rgb(207, 243, 240);
+}
+
+.li-item{
+  list-style: none;
+  margin-left: 1rem;
+
+}
+
+.location-icon{
+  height: 30px;
+  width: 30px;
+}
+
+#input-location{
+  font-size: larger;
+  /* padding-left: 1em; */
+  font-weight: 400;
+  text-indent: 1rem;
+
+}
+
+.calendar-dates{
+ display: flex;
+ justify-content: center;
+}
+
+.month-year-container{
+
+  border-radius: 1rem;
+  border: solid 1px gray;
+  background-color: white;
+  z-index: 1;
+}
+.month-year-tags{
+  padding-top: 2rem;
+  font-size: larger;
+  font-weight: 600;
+  
+}
+.next-month{
+  background: url("./assets/chevron-right-solid.svg");
+  background-size: 100% 100%;
+  padding: 10px 10px 10px 10px;
+
+}
+
+.prev-month{
+  background: url("./assets/chevron-left-solid.svg");
+  background-size: 100% 100%;
+  padding: 10px 10px 10px 10px;
+  margin-left: 2rem;
+  margin-right: 5rem;
+
+}
+
+.when-travel{
+  padding: 0.5rem;
+  font-size: larger;
+  color: gray;
+  font-weight: 400;
+}
+
+.calendar{
+  position: absolute;
+  top: 10%;
+  display: flex;
+}
+.calendar-icon{
+  background: url("/src/assets/calendar.svg");
+  background-size: 100% 100%;
+  padding: 10px 10px 10px 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+
+}
+
+.calendar-month{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+h5{
+  font-size: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.day-selected:hover{
+  background-color: lightblue;
+  
+}
+.day-selected{
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+
+.account{
+  grid-column: 9 / 13;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: flex-end;
+
+}
+.nav-options{
+  display: flex;
+  flex-flow: row;
+}
+
+.main-site-content{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+
+}
+.filters{
+  grid-column: 1 / 3;
+  grid-row-start: 1;
+  border: solid 5px black;
+}
+
+
+
+
+
+.accomodationInfo{
+  grid-column: 3 / 13;
+
+
+}
+
+.search-info{
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 700;
+}
+
+.listings-container{
+  display: grid;
+  gap: 1.5rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+
+  /* eligira entre dos valores el que sea mas pequeño, por lo que si tenemos un grid de listings, reducimos la pantalla el mas pequeño sera 25rem cada grid, pero cuando reducimos muchooo, tanto que solo cabe un grid, entonces tomara el 100% del espacio disponible
+  en otras palabras, si lo hago mas pequeño coje el 100 por 100, no el 25 rem */
+}
+
+.listing-item{
+
+  margin-right:25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+
+  max-width: 100%;
+  min-width: 150px;
+  
+
+  border-radius: 1rem;
+  border: solid 5px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* .gallery-container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 100%;
+  min-width: 90%;
+  min-height: 200px;
+  align-items: center;
+} */
+
+.image-counter{
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+  min-width: 100%;
+
+}
+/* .listing-icons{
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  height: 60%;
+}
+
+.favorite-button{
+  display: flex;
+  min-width: 100%;
+  justify-content: flex-end;
+} */
+
+.listing-info{
+  border: solid 5px black;
+  text-align: center;
+  min-width: 100%;
+  height: auto;
+  
+}
+
+
+.listing-place-rating{
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-price{
+  display: flex;
+  justify-content: start;
+}
+
+
+
+.footer{
+  border: solid 5px black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  height: 40px;
+  width: 100vw;
+  z-index: 1;
+}
+
+.testBottom{
+  border: solid 5px black;
+}
+
+.showcase{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 90%;
+  height: 90%;
+}
+
+.true{ background-image:url('/src/assets/red-heart-icon.svg');}
+.false{  background-image: url('/src/assets/heart-regular.svg');}
+.favorite{
+  position:absolute;
+  top: 5px;
+  right: 0%;
+  width: 25px;
+  height:25px;
+  background-size: cover;
+  cursor: pointer;
+}
+.listing-gallery{
+  position: relative;
+  display: inline-block;
+}
+.listing-prev-picture{
+  position:absolute;
+  top: 50%;
+  left: 0%;
+  width: 15px;
+  height:25px;
+  background-image: url('/src/assets/chevron-left-solid.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+.listing-next-picture{
+  position:absolute;
+  top: 50%;
+  right: 0%;
+  width: 15px;
+  height:25px;
+  background-image: url('/src/assets/chevron-right-solid.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+
