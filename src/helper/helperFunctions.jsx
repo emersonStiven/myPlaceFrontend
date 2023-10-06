@@ -1,17 +1,4 @@
 
-
-// export async function  fetchListings(endpoint){
-
-//     const res = await fetch(endpoint);
-//     if(!res.ok){
-//         throw {
-//             error:true, status: res.status, statusText: res.statusText
-//         }
-//     }
-//     const data = await res.json();
-//     return data.listings
-// }
-
 export async function fetchGeographicLocations(url){
     const data = await fetch(url)
     const response = await data.json();

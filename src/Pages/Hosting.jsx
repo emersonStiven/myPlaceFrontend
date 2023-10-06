@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export const Hosting = () => {
   return (
-    <div>Hosting</div>
+    <div>Host info goes here</div>
   )
-}
+};

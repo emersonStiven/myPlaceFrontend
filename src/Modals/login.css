@@ -1,0 +1,196 @@
+.modal {
+  font-size: 14px;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-container {
+  padding: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  display: block;
+  margin: auto;
+  min-width: 390px;
+  max-width: 480px;
+  min-height: 200px;
+  max-height: 500px;
+  background-color: white;
+}
+
+.modal-container button {
+  background-color: var(--COLOR-DESIGN);
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: white;
+  font-weight: 500;
+}
+.modal-container span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+  margin-bottom: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.container-email-vef {
+  padding-top: 0.5rem;
+  background-color: white;
+  padding-bottom: 2rem;
+}
+.container-email-vef h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.container-email-vef input {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-indent: 0.8rem;
+  font-weight: 700;
+}
+
+.container-oauth-logins {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  cursor: pointer;
+  border-radius: 5rem;
+  background-color: var(--COLOR-DESIGN);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  color: azure;
+}
+
+.container-oauth-logins div p {
+  font-weight: 700;
+  grid-column: 2 / 3;
+  margin-bottom: 0;
+}
+.icon-google {
+  background: url("../assets/google.svg") no-repeat;
+}
+.icon-github {
+  background: url("../assets/github.svg") no-repeat;
+}
+.icon-facebook {
+  background: url("../assets/facebook.svg") no-repeat;
+}
+.icon-thirdparty {
+  grid-column: 1 / 2;
+  background-size: 100% 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+  padding: 0.3rem;
+  height: 10px;
+}
+
+/* ------------------------------------- REGISTER ------------------------------------- */
+
+.register-form{
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ box-sizing: border-box;
+} 
+.register-form input{
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: black;
+
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.register-form input:focus{
+  border: none;
+}
+.register-b{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-weight: 450;
+  color: white;
+  border: 1px solid var(--COLOR-DESIGN);
+  border-radius: 15px;
+  margin-left: 10%;
+  cursor: pointer;
+  background-color: var(--COLOR-DESIGN);
+  margin-bottom: 10px;
+
+}
+
+.modal-container-r {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: block;
+  margin: auto;
+  min-width: 350px;
+  max-width: 400px;
+  min-height: 500px;
+  max-height: 600px;
+  background-color: white;
+
+}
+
+.modal-container-r h1{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 1rem;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.signup-options{
+  display: flex;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup-options button{
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.signup-warning{
+  width: 80%;
+  white-space: pre-line;
+  margin-left: auto;
+  margin-right: auto;
+  color: grey;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
