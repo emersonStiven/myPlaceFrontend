@@ -5,8 +5,6 @@ import "./index.css";
 import { AppWrapper } from "./Pages/AppWrapper.jsx";
 
 
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   
   <React.Suspense>
