@@ -23,7 +23,7 @@ export const Verification = () => {
           <div>
             <input
               type="radio"
-              name="uploadMethod2"
+              name="uploadMethod1"
               value={"upload"}
               checked={selected == "upload"}
               onChange={(e) => handleRadioButtons(e)}
