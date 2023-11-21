@@ -52,15 +52,18 @@ html{
   background-color: var(--BGCOLOR);
 }
 
- body {
+
+body {
   padding: 0;
   /* min-width: 500px; */
   min-height: 100vh;
   /* max-width: calc(100% - 5%); */
+
   
   line-height: 1.5;
   background-color: var(--BODY-BGCOLOR);
   color: var(--FC);
+ 
 }
 
 input, button, textarea{
@@ -93,23 +96,37 @@ img{
 } 
 
 
-.app_wrapper{
-  /* margin-left: auto;
-  margin-right: auto;
-  max-width: calc(100% - 3%); */
-  display: grid;
-  grid-gap: 1rem;
+.app-wrapper{
+  
+  /* display: grid;
+  grid-gap: 1rem; */
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer{
+  margin-bottom: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  height: 7vh;
+  width: 100%;
+  z-index: 1;
 }
 
 
 .main-site-content{
-  /* display: grid;
-  grid-template-columns: repeat(16, 1fr); */
   display: flex;
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+  flex: 1 1 auto;
+  /* min-height: calc(100vh - 250px); */
 
 }
 
@@ -141,6 +158,7 @@ img{
   gap: 1.5rem;
   /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  
   width: 100%;
 
   /* eligira entre dos valores el que sea mas pequeño, por lo que si tenemos un grid de listings, reducimos la pantalla el mas pequeño sera 25rem cada grid, pero cuando reducimos muchooo, tanto que solo cabe un grid, entonces tomara el 100% del espacio disponible
@@ -219,17 +237,7 @@ img{
 
 
 
-.footer{
-  margin-bottom: 1px;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  background-color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  height: 7vh;
-  width: 100%;
-  z-index: 1;
-}
+
 
 .testBottom{
   border: solid 5px black;
@@ -245,8 +253,8 @@ img{
   height: 90%;
 }
 
-.true{ background-image:url('/src/assets/red-heart-icon.svg');}
-.false{  background-image: url('/src/assets/heart-regular.svg');}
+.true{ background-image:url('/src/assets/home/red-heart-icon.svg');}
+.false{  background-image: url('/src/assets/home/heart-regular.svg');}
 .favorite{
   position:absolute;
   top: 5px;
@@ -266,7 +274,7 @@ img{
   left: 0%;
   width: 15px;
   height:25px;
-  background-image: url('/src/assets/chevron-left-solid.svg');
+  background-image: url('/src/assets/home/chevron-left-solid.svg');
   background-size: cover;
   cursor: pointer;
 }
@@ -276,7 +284,7 @@ img{
   right: 0%;
   width: 15px;
   height:25px;
-  background-image: url('/src/assets/chevron-right-solid.svg');
+  background-image: url('/src/assets/home/chevron-right-solid.svg');
   background-size: cover;
   cursor: pointer;
 }
